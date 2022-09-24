@@ -4,5 +4,13 @@ Console.Clear();
 Console.Write("Введите целое трехзначное число: ");
 int number = int.Parse(Console.ReadLine());
 
-int result = (number % 100) / 10;
-Console.WriteLine(result);
+int result = (number / 10) % 10;
+
+if ((number > 99) && (number < 1000))
+  {
+    Console.WriteLine ($"Вторая цифра: {result}");
+  }
+  else
+  {
+    Console.WriteLine ("Вы ввели не трехзначное число");
+  }
